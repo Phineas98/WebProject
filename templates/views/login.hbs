@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://use.fontawesome.com/f527fe6f3e.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="login_form">
+    <div class="login_form-user">
+        <header>Lo<span class="blue">g</span>in Now</header>
+        <form action="/login" method="POST">
+          <div class="login_user space">
+            <input type="text" placeholder="Username" name="name">
+          </div>
+          <div class="login_user space">
+            <input type="email" placeholder="Enter your Email ID" name="email">
+          </div>
+          <div class="login_user space">
+            <input type="password" placeholder="Enter your password" name="password">
+          </div>
+          <div class="forgot_pass">
+            <a href="" class="forgot">Forgotton Password ?</a>
+          </div>
+          <div class="login_btn">
+            {{!-- <a href="" type="button" class="login_user_btn">Login</a> --}}
+              <input type="submit" class="login_user_btn" id="Login" value="Login">
+          </div>
+          <div class="register-link">
+            <span id="link">Don't Have account ? Create Account</span>
+            <a href="/registration" id="reg-link">Registration</a>
+          </div>
+
+        </form>
+    </div>
+  </section>
+  
+
+<footer>
+  <div class="center">
+    Copyright &copy; www.PS_Acedemy.com | All Rights Reserved !
+    <div class="fav_icon">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+</div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://use.fontawesome.com/f527fe6f3e.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  {{>navbar}}
+  <section class="reg_form">
+    <!-- <img src="./img/registration-bg.jpg" alt=""> -->
+    <div class="registration">
+      <div class="form">
+        <header class="registration_heading">Regi<span class="red">s</span>tration <span class="red">N</span>ow</header>
+        <form action="/registration" method="POST">
+        <div class="item_form space">
+          <input type="text" name="name" required placeholder="Enter your Name">
+        </div>
+        <div class="item_form space">
+          <label class="radio">
+           <!-- Male : <input type="radio" class="gender" name="gender"  value="male" checked> -->
+           <span class="Male">Male</span>
+           <input type="radio" class="gender" name="gender" required value="male" checked> 
+          </label>
+          <label class="radio">
+           <!-- Female : <input type="radio" class="gender" name="gender" value="female" checked> -->
+           <span class="female">Female</span>
+           <input type="radio" class="gender" name="gender" value="Female" checked>
+          </label>
+        </div>
+          <div class="item_form space">
+         <span class="age">Age :</span> <input type="number" required placeholder="Enter Your Age" name="age" value="age">
+          </div>
+          <div class="item_form space">
+          <input type="number" required placeholder="Enter Your phone number" name="phone" value="phone">
+          </div>
+          <div class="item_form space">
+            <input type="email" name="email" required placeholder="Enter your Email Address">
+          </div>
+          <div class="item_form space">
+            <input type="password"  name="password" required placeholder="Enter your password">
+          </div>
+          <div class="item_form space">
+            <input type="password"  name="confirmpassword" required placeholder="confirm your password">
+          </div>
+ 
+          <div class="checkbox">
+           <span class="checkbox_eligible">Are your eligible :</span><input type="checkbox" >
+          </div>
+          
+          <div class="register_btn">
+            {{!-- <a href="/registration" type="submit" class="registration_btn">Register Now</a> --}}
+              <input type="submit" class="registration_btn" value="Register">
+            <button type="reset" name="reset" class="reset_btn">Reset</button>
+          </div>
+          <div class="fav_icon">
+
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.apple.com/" target="_blank"><i class="fa fa-apple"></i></a>
+            
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: block;
+  padding: 2px 2px;
+}
+
+.logo img {
+  /* display: block; */
+  height: 80px;
+  padding: 2px 1px;
+  margin: -64px 85px;
+  animation: logo 3s linear infinite;
+}
+
+@keyframes logo {
+  50% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+#navbar::before {
+  content: "";
+  position: absolute;
+  background: #ffbf00;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 22px 2px;
+  align-items: center;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 2px 41px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#navbar ul li a:hover {
+  text-decoration: underline;
+  color: white;
+
+}
+
+.content {
+  display: flex;
+  position: absolute;
+  background: url('backgrund.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.content h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_reveal_box 1s ease;
+  animation-delay: .3s;
+}
+
+.content h1:nth-child(1) span {
+  animation-delay: .5s;
+}
+
+.content h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+
+.content h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+.content h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1s;
+}
+
+.content h1:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.content h1:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.content h1:nth-child(3) {
+  animation: text_reveal_name .5s ease forwards;
+  animation-delay: 3s;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+
+.btn:hover {
+  color: white;
+  background-color: crimson;
+  box-shadow: -1px 2px 50px crimson;
+  font-weight: 600;
+}
+
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes text_reveal_name {
+  100% {
+    color: rgb(8, 226, 190);
+    font-weight: 500;
+  }
+}
+
+.login {
+  display: flex;
+  padding-left: 30px;
+}
+
+#Login_user a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border: 1px solid green;
+  border-radius: 18px;
+  background: rgb(0, 90, 0);
+  padding: 5px 25px;
+}
+
+#Login_user a:hover {
+  box-shadow: inset -1px 2px 30px rgb(0, 179, 0);
+  transform: scale(1.1);
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 12px 2px;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+/* Registration form  */
+
+
+
+.red{
+  color: crimson;
+}
+.reg_form{
+  display: flex;
+  position: absolute;
+  background: url('backgrund.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+}
+.registration{
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px ;
+  text-align: center;
+  background: #0b1522 ;
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  padding: 60px 32px;
+}
+.form header{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.item_form{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+}
+.item_form input{
+  /* height: 100px; */
+  width: 100%;
+  background:transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+.gender{
+  height: 20px;
+}
+.age{
+  color: white;
+  font-size: 20px;
+}
+.checkbox{
+  color: white;
+  padding: 2px 2px;
+  display: flex;
+  flex-direction: row;
+}
+.checkbox_eligible{
+  padding: 2px 2px;
+  font-size: 17px;
+}
+.Male{
+  padding: 2px 65px;
+}
+.space{
+  margin-bottom: 16px;
+}
+.registration_btn{
+  margin: 7px 7px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.registration_btn:hover{
+  color: white;
+  background-color: crimson;
+  box-shadow: -1px 2px 50px crimson;
+  font-weight: 600;
+}
+.reset_btn{
+  padding: 5px 20px;
+  margin: 2px 2px;
+  background: rgb(218, 165, 32);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.fav_icon{
+  margin-top: 13px;
+  padding: 2px 2px;
+}
+.fav_icon a{
+  color: white;
+
+}
+.fa{
+  margin: 5px 21px;
+}
+
+
+
+
+/* login form  */
+.blue{
+  color:rgb(20, 140, 220);
+}
+.login_form{
+  background: url('bg-1.jpg');
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+.login_form::after{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   opacity: 0.7;
+   z-index: -1;
+}
+.login_form-user{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%,-50%);
+  width: 370px ;
+  text-align: center;
+  background: transparent ;
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  padding: 60px 32px;
+}
+.login_form-user header{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+}
+.login_user{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+  border-radius: 26px;
+}
+.login_user input{
+  width: 100%;
+  background:transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  text-align: center;
+}
+
+.login_user_btn{
+  margin: 7px 7px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  color: rgb(20, 140, 220);
+  background-color: transparent;
+  border: 2px solid rgb(20, 140, 220);
+  border-radius: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.login_user_btn:hover{
+  color: white;
+  background-color: rgb(20, 140, 220);
+  box-shadow: -1px 2px 50px rgb(20, 140, 220);
+  font-weight: 600;
+}
+.forgot_pass a{
+  text-decoration: none;
+  color: white;
+  padding: 2px 2px;
+  margin: 2px 2px;
+}
+.forgot_pass a:hover{
+  text-decoration: underline;
+}
+#link{
+  color: white;
+}
+#reg-link{
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: crimson;
+}
+#reg-link:hover{
+  text-decoration: underline;
+}
+
+/* footer section  */
+
+.center{
+  text-align: center;
+}
+
+footer{
+  background: black;
+  color: white;
+  padding:12px 2px;
+}
+
+
+
+
+
+.congo h1{
+  border: 2px solid red;
+}
