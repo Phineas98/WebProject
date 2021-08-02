@@ -4,6 +4,7 @@ const path = require("path");
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
 const port = process.env.PORT || 4000; 
+const mongoDbURL = process.env.MONGODB_URL || 'mongodb://mongo/api_demo'
 
 require("./db/conn");
 
