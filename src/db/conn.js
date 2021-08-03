@@ -9,3 +9,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/DanceRegi
 }).catch((err) => {
   console.log(`no connection`);
 })
+
