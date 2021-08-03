@@ -47,6 +47,6 @@ DanceSchema.pre("save", async function(next){
 })
 
 
-const Register = new mongoose.model("Register", DanceSchema);
+const Register = new mongoose.model("danceacedemy", DanceSchema);
 
 module.exports = Register;
